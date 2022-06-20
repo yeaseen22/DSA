@@ -11,7 +11,7 @@ using namespace std;
 //         int digit = n % 10;
 //         prod = prod * digit;
 //         sum = sum + digit;
-//         n = n / 10;
+//         n = n / 10; 
 //     }
 //     int answer = prod - sum;
 //     return answer;
@@ -20,14 +20,23 @@ using namespace std;
 // number of 1 bit
 // int hammingWeight(uint32_t n) {
         
-        // int count = 0;
-        // while(n!=0){
-        //     if(n&1){
-        //         count++;
-        //     }
-        //     n= n>>1;
-        // }
-        // return count;
+//         int count = 0;
+//         while(n!=0){
+//             if(n&1){
+//                 count++;
+//             }
+//             n= n>>1;  (ore n = n/2;)
+//         }
+
+
+    // ore( while (n > 0)
+    // count++;
+    // n = n & (n-1);
+    // ) better solution
+
+    
+//         return count;
+//         }
 
     // reverse an integer
 
