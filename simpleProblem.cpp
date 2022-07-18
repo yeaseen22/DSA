@@ -20,16 +20,18 @@ int main()
 
     // int a = 0;
     // int b = 1;
+    // int nextNumber;
     // cout << a << endl;
     // cout << b << endl;
 
     // for (int i = 1; i <= n; i++)
     // {
-    //     int nextNumber = a + b;
+    //     nextNumber = a + b;
     //     cout << nextNumber << endl;
     //     a = b;
     //     b = nextNumber;
     // }
+    // cout << nextNumber;
 
     // prime number 
     int n;

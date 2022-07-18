@@ -79,6 +79,8 @@ int main()
     cin >> amount;
     int Tk100, Tk50, Tk20, Tk1;
 
+    
+    
     switch (1)
     {
     case 1:
@@ -105,4 +107,5 @@ int main()
 
     cout << endl;
     return 0;
+
 }

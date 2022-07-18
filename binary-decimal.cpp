@@ -1,65 +1,38 @@
 #include <iostream>
 #include <math.h>
+#include <stdio.h>
 
 using namespace std;
+
+int main2 (void){
+        int i            = 0;
+        unsigned int u_i = 0;
+        int j            = 0;
+        int b[16]        = {0}; //Assuming your integer size is 16bit
+
+        printf("input number");
+        scanf("%d",&i);
+
+        u_i = (unsigned int)i;
+
+        for(j=15;j>=0;j--) {
+            b[j] = u_i & 0x1;
+            u_i  = u_i >> 1;
+        }
+
+        for (j=0;j<=15;j++)
+            printf("%d", b[j]);
+
+        printf("\n");
+        return 0;
+    }
 
 int main()
 {
 
   // negative decimal to binary
-  int n;
-  int i = 31;
-  int arr[32] = {0};
-  cin >> n;
-  if (n == 0)
-  {
-    cout << " ";
-  }
-  else if (n > 0)
-  {
-    while (n > 0)
-    {
-      arr[i] = n % 2;
-      i--;
-      n = n / 2;
-    }
-  }
-  else
-  {
-    int x, counter = 0;
-    x = abs(n);
-    while ((x > 0) || (i >= 0))
-    {
-      if (x > 0)
-      {
-        arr[i] = x % 2;
-      }
-      if ((counter == 0) && (arr[i] == 1))
-      {
-        counter++;
-        i--;
-        x = x / 2;
-        continue;
-      }
-      if (counter)
-      {
-        if (arr[i] == 1)
-        {
-          arr[i] = 0;
-        }
-        else
-        {
-          arr[i] = 1;
-        }
-      }
-      i--;
-      x = x / 2;
-    }
-  }
-  for (i = 0; i < 32; i++)
-  {
-    cout << arr[i] << " ";
-  }
+  main2();
+
 
   // decimal to binary convertion
   // int n;
