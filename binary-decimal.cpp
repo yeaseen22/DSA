@@ -4,35 +4,41 @@
 
 using namespace std;
 
-int main2 (void){
-        int i            = 0;
-        unsigned int u_i = 0;
-        int j            = 0;
-        int b[16]        = {0}; //Assuming your integer size is 16bit
+// int main2 (void){
+//         int i            = 0;
+//         unsigned int u_i = 0;
+//         int j            = 0;
+//         int b[16]        = {0}; //Assuming your integer size is 16bit
 
-        printf("input number");
-        scanf("%d",&i);
+//         printf("input number");
+//         scanf("%d",&i);
 
-        u_i = (unsigned int)i;
+//         u_i = (unsigned int)i;
 
-        for(j=15;j>=0;j--) {
-            b[j] = u_i & 0x1;
-            u_i  = u_i >> 1;
-        }
+//         for(j=15;j>=0;j--) {
+//             b[j] = u_i & 0x1;
+//             u_i  = u_i >> 1;
+//         }
 
-        for (j=0;j<=15;j++)
-            printf("%d", b[j]);
+//         for (j=0;j<=15;j++)
+//             printf("%d", b[j]);
 
-        printf("\n");
-        return 0;
-    }
+//         printf("\n");
+//         return 0;
+//     }
 
-int main()
-{
+// int main()
+// {
 
-  // negative decimal to binary
-  main2();
+//   // negative decimal to binary  
 
+// // return 0;
+// }
+
+int main(){
+
+  return 0;
+}
 
   // decimal to binary convertion
   // int n;
@@ -52,40 +58,40 @@ int main()
   // cout << "Answer is" << ans << endl;
 
   // binary to decimal
-  int n;
-  cin >> n;
+//   int n;
+//   cin >> n;
 
-  int i = 0;
-  int ans = 0;
+//   int i = 0;
+//   int ans = 0;
 
-  while (n != 0)
-  {
-    int digit = n % 10;
+//   while (n != 0)
+//   {
+//     int digit = n % 10;
 
-    if (digit == 1)
-    {
-      ans = ans + pow(2, i);
-    }
-    n = n / 10;
-    i++;
-  }
-  cout << ans << endl;
-  // another afforoach o binary to decimal
+//     if (digit == 1)
+//     {
+//       ans = ans + pow(2, i);
+//     }
+//     n = n / 10;
+//     i++;
+//   }
+//   cout << ans << endl;
+//   // another afforoach o binary to decimal
 
-  int n;
-  cout << "Enter a  binary number" << endl;
-  cin >> n;
-  long long int ans = 0;
-  int i = 0;
-  while (n > 0)
-  {
+//   int n;
+//   cout << "Enter a  binary number" << endl;
+//   cin >> n;
+//   long long int ans = 0;
+//   int i = 0;
+//   while (n > 0)
+//   {
 
-    int bit = n & 1;
-    ans = bit * pow(2, i) + ans;
-    n = n / 10;
-    i++;
-  }
-  cout << ans;
+//     int bit = n & 1;
+//     ans = bit * pow(2, i) + ans;
+//     n = n / 10;
+//     i++;
+//   }
+//   cout << ans;
 
-  return 0;
-}
+//   return 0;
+// }

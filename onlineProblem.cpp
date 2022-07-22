@@ -21,28 +21,40 @@ int subtractProductAndSum(int n)
 }
 
 // number of 1 bit
-int hammingWeight(uint32_t n)
-{
 
-    int count = 0;
-    while (n != 0)
-    {
-        if (n & 1)
-        {
-            count++;
-        }
-        n = n >> 1; //(ore n = n/2;)
-    }
+int hammingWeight(uint32_t n, uint32_t n1) {
+  
+	int count = 0;
+  int count2 = 0;
+  
+	while (n != 0) {
+		if (n & 1) {
+			count++;
+		}
+		n = n >> 1; //(ore n = n/2;)
+	}
 
-    // ore
-    // (
-    while (n > 0)
-        count++;
-    n = n & (n - 1);
-    // ) better solution
+  while (n1 != 0) {
+		if (n1 & 1) {
+			count2++;
+		}
+		n1 = n1 >> 1; //(ore n = n/2;)
+	}
 
-    return count;
-}
+	// ore
+	// (
+	// while (n > 0)
+	// 	count++;
+	// n = n & (n - 1);
+	// ) better solution
+
+  int sum = count + count2;
+
+	cout << sum << endl;
+
+  return 0;
+};
+
 
 // reverse an integer
 
@@ -80,7 +92,8 @@ int reverse(int x)
 int main()
 {
     // subtractProductAndSum(234);
-    // hammingWeight()
+    int a = hammingWeight(2, 2);
+    cout<<a<<endl;
     //  reverse(123);
     
     return 0;

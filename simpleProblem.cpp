@@ -14,6 +14,29 @@ int main()
     // }
     // cout << sum << endl;;
 
+// function lecture home work
+// int findNthFibo = 5;
+// 	int n = 6;
+
+// 	int a = 0;
+// 	int b = 1;
+// 	int nextNumber;
+// 	cout << a << endl;
+// 	cout << b << endl;
+
+// 	for (int i = 1+a+b; i < findNthFibo; i++) {
+//     int sum = nextNumber = a + b;
+// 		nextNumber = a + b;
+// 		cout << sum << endl;
+// 		a = b;
+// 		b = nextNumber;
+  
+
+    
+// 	}
+// 	cout << nextNumber;
+
+
 
 // fibonacci serious
     // int n = 10;
