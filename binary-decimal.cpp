@@ -4,38 +4,35 @@
 
 using namespace std;
 
-// int main2 (void){
-//         int i            = 0;
-//         unsigned int u_i = 0;
-//         int j            = 0;
-//         int b[16]        = {0}; //Assuming your integer size is 16bit
+// negative decimal to binary
 
-//         printf("input number");
-//         scanf("%d",&i);
+int main2 (void){
+        int i            = 0;
+        unsigned int u_i = 0;
+        int j            = 0;
+        int b[16]        = {0}; //Assuming your integer size is 16bit
 
-//         u_i = (unsigned int)i;
+        printf("input number");
+        scanf("%d",&i);
 
-//         for(j=15;j>=0;j--) {
-//             b[j] = u_i & 0x1;
-//             u_i  = u_i >> 1;
-//         }
+        u_i = (unsigned int)i;
 
-//         for (j=0;j<=15;j++)
-//             printf("%d", b[j]);
+        for(j=15;j>=0;j--) {
+            b[j] = u_i & 0x1;
+            u_i  = u_i >> 1;
+        }
 
-//         printf("\n");
-//         return 0;
-//     }
+        for (j=0;j<=15;j++)
+            printf("%d", b[j]);
 
-// int main()
-// {
+        printf("\n");
+        return 0;
+    }
 
-//   // negative decimal to binary  
-
-// // return 0;
-// }
 
 int main(){
+
+  main2();
 
   return 0;
 }
