@@ -107,10 +107,12 @@ using namespace std;
 //         }
 //     }
 
-int findUnique(int arr[], int size){
+int findUnique(int arr[], int size)
+{
     int ans = 0;
-    for(int i=0; i<size; i++){
-        ans=ans^arr[i];
+    for (int i = 0; i < size; i++)
+    {
+        ans = ans ^ arr[i];
         // cout <<ans;
     }
     return ans;
@@ -119,20 +121,19 @@ int findUnique(int arr[], int size){
 int main()
 {
 
-
     // find unique element in array
-    int arr[5] = {1,3,4,1,3};
+    // int arr[5] = {1,3,4,1,3};
 
-      cout << findUnique(arr, 5);
-
+    //   cout << findUnique(arr, 5);
+    // int count= 0;
     // for(int i= 0; i < 5; i++){
-    //     int count= 0;
+
     //     for(int j= 0; j < 5; j++){
     //         if(i != j){
 
     //            if(arr[i] == arr[j]){
     //             count++;
-    //            } 
+    //            }
     //         }
     //     }
     //     if(count == 0){
@@ -140,14 +141,26 @@ int main()
     //     }
     // }
 
-    
-    
+    // find occurences in array the arrya
+    int arr[6] = {1, 2, 2, 1, 1, 3};
+    int count = 0;
 
-    
-    
-    
-    
-    
+    for (int i = 0; i < 6; i++)
+    {
+        for (int j = 0; j < 6; j++)
+        {
+            if (arr[i] == arr[j])
+            {
+                count++;
+                // cout<<count<<endl;
+            }
+           
+            if(count == j){
+                cout<<count<<endl;
+            }
+        }
+
+    }
 
     // int even[8] = {5, 2, 9, 4, 7, 6, 1, 0};
     // int odd[5] = {11, 33, 9, 76, 43};
