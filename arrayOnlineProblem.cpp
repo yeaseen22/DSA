@@ -141,25 +141,30 @@ int main()
     //     }
     // }
 
-    // find occurences in array the arrya
+    // find occurences in the array
     int arr[6] = {1, 2, 2, 1, 1, 3};
-    int count = 0;
+    int cnt;
+    int visited[6];
 
     for (int i = 0; i < 6; i++)
     {
-        for (int j = 0; j < 6; j++)
-        {
-            if (arr[i] == arr[j])
-            {
-                count++;
-                // cout<<count<<endl;
-            }
-           
-            if(count == j){
-                cout<<count<<endl;
-            }
-        }
+       if(visited[i] == 1){
+        continue;
+       }
+       cnt=1;
 
+       for(int j=i+1; j < 6; j++){
+        if(arr[i] == arr[j]){
+            cnt++;
+            visited[j]=1; 
+        }
+       }
+       cout<< arr[i]<<" Found Times in array "<<cnt<<endl;
+       if(arr[i] != cnt){
+        return true;
+       } else{
+        return false;
+       }
     }
 
     // int even[8] = {5, 2, 9, 4, 7, 6, 1, 0};
