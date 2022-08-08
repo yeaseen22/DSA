@@ -1,5 +1,6 @@
 #include <iostream>
 #include <bits/stdc++.h>
+#include <Math.h>
 
 using namespace std;
 // void printArray(int arr[], int n)
@@ -112,7 +113,7 @@ int findUnique(int arr[], int size)
     int ans = 0;
     for (int i = 0; i < size; i++)
     {
-        ans = ans ^ arr[i];
+        ans = ans  ^arr[i];
         // cout <<ans;
     }
     return ans;
@@ -142,30 +143,42 @@ int main()
     // }
 
     // find occurences in the array
-    int arr[6] = {1, 2, 2, 1, 1, 3};
-    int cnt;
-    int visited[6];
+    // int arr[6] = {1, 2, 2, 1, 1, 3};
+    // int cnt;
+    // int visited[6];
 
-    for (int i = 0; i < 6; i++)
-    {
-       if(visited[i] == 1){
-        continue;
-       }
-       cnt=1;
+    // for (int i = 0; i < 6; i++)
+    // {
+    //    if(visited[i] == 1){
+    //     continue;
+    //    }
+    //    cnt=1;
 
-       for(int j=i+1; j < 6; j++){
-        if(arr[i] == arr[j]){
-            cnt++;
-            visited[j]=1; 
+    //    for(int j=i+1; j < 6; j++){
+    //     if(arr[i] == arr[j]){
+    //         cnt++;
+    //         visited[j]=1;
+    //     }
+    //    }
+    //    cout<< arr[i]<<" Found Times in array "<<cnt<<endl;
+    //    if(arr[i] != cnt){
+    //     return true;
+    //    } else{
+    //     return false;
+    //    }
+    // }
+
+    // find duplicate in array
+    int arr[6]={1, 2, 2, 1, 1, 3};
+    for(int i=1; i <= 5; i++){
+        for(int j=i+1; j <= 5; j++){
+            if(arr[i] == arr[j]){
+                cout << arr[i]<<endl;
+            }
         }
-       }
-       cout<< arr[i]<<" Found Times in array "<<cnt<<endl;
-       if(arr[i] != cnt){
-        return true;
-       } else{
-        return false;
-       }
     }
+
+    
 
     // int even[8] = {5, 2, 9, 4, 7, 6, 1, 0};
     // int odd[5] = {11, 33, 9, 76, 43};
