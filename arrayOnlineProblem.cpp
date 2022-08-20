@@ -108,17 +108,6 @@ using namespace std;
 //         }
 //     }
 
-int findUnique(int arr[], int size)
-{
-    int ans = 0;
-    for (int i = 0; i < size; i++)
-    {
-        ans = ans  ^arr[i];
-        // cout <<ans;
-    }
-    return ans;
-}
-
 int main()
 {
 
@@ -169,16 +158,42 @@ int main()
     // }
 
     // find duplicate in array
-    int arr[6]={1, 2, 2, 1, 1, 3};
-    for(int i=1; i <= 5; i++){
-        for(int j=i+1; j <= 5; j++){
-            if(arr[i] == arr[j]){
-                cout << arr[i]<<endl;
+    int arr[6] = {1, 2, 2, 1, 1, 3};
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = i + 1; j <= 5; j++)
+        {
+            if (arr[i] == arr[j])
+            {
+                cout << arr[i] << endl;
             }
         }
     }
 
-    
+    // find the all duplicate element in array
+    // int arr[6]={1, 2, 2, 1, 1, 3};
+    // for(int i=1; i <= 5; i++){
+    //     for(int j=i+1; j <= 5; j++){
+    //         if(arr[i] == arr[j]){
+    //             cout << arr[i]<<endl;
+    //         }
+    //     }
+    // }
+
+    // intersection of two array
+    int arr1[5] = {12, 34, 55, 66, 8};
+    int arr2[5] = {10, 33, 54, 67, 8};
+
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            if (arr1[i] == arr2[j])
+            {
+                cout << arr1[i]<< endl;
+            }
+        }
+    }
 
     // int even[8] = {5, 2, 9, 4, 7, 6, 1, 0};
     // int odd[5] = {11, 33, 9, 76, 43};
