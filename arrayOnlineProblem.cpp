@@ -181,16 +181,19 @@ int main()
     // }
 
     // intersection of two array
-    int arr1[5] = {12, 34, 55, 66, 8};
-    int arr2[5] = {10, 33, 54, 67, 8};
+    int arr1[6] = {12, 34, 55, 66, 8, 11};
+    int arr2[6] = {10, 33, 54, 67, 8, 9};
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 6; i)
     {
-        for (int j = 0; j < 5; j++)
+        int element = arr1[i];
+        for (int j = 0; j < 6; j)
         {
-            if (arr1[i] == arr2[j])
+            if (element == arr2[j])
             {
-                cout << arr1[i]<< endl;
+                cout << element << endl;
+                arr2[j] = -1;
+                break;
             }
         }
     }
