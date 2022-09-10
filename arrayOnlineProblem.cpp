@@ -1,6 +1,7 @@
 #include <iostream>
 #include <bits/stdc++.h>
 #include <Math.h>
+#include <vector>
 
 using namespace std;
 // void printArray(int arr[], int n)
@@ -184,19 +185,70 @@ int main()
     int arr1[6] = {12, 34, 55, 66, 8, 11};
     int arr2[6] = {10, 33, 54, 67, 8, 9};
 
-    for (int i = 0; i < 6; i)
-    {
-        int element = arr1[i];
-        for (int j = 0; j < 6; j)
+    // for (int i = 0; i < 6; i)
+    // {
+    //     int element = arr1[i];
+    //     for (int j = 0; j < 6; j)
+    //     {
+    //         if (element == arr2[j])
+    //         {
+    //             cout << element << endl;
+    //             arr2[j] = -1;
+    //             break;
+    //         }
+    //     }
+    // }
+    // or
+
+    // int i=0, j-0;
+    // vector<int> ans;
+
+    // while(i<arr1[6] && j<arr2[6]){
+
+    //     if(arr[i] == arr[j]){
+
+    //         ans.push_back(arr[i]);
+    //         i++;
+    //         j++;
+    //     }
+
+    //     else if(arr[i] < arr2[j])
+    //         i++;
+        
+    //     else
+    //         j++;
+    // }
+
+
+    // pair sum
+
+    // sort one 
+    void sortOne(int arr[], int n) {
+
+    int left = 0, right = n-1;
+
+    while(left < right) {
+
+        while(arr[left] == 0 && left < right )  {
+            left++;
+        }
+
+        while(arr[right]==1 && left < right){
+            right--;
+        }
+
+        //agar yha pohoch gye ho, iska matlab
+        //arr[left]==1 and arr[right]==0
+        if(left<right)
         {
-            if (element == arr2[j])
-            {
-                cout << element << endl;
-                arr2[j] = -1;
-                break;
-            }
+            swap(arr[left], arr[right]);
+            left++;
+            right--;
         }
     }
+
+}
+    
 
     // int even[8] = {5, 2, 9, 4, 7, 6, 1, 0};
     // int odd[5] = {11, 33, 9, 76, 43};
