@@ -10,11 +10,11 @@ using namespace std;
 
 int main(){
 
-    array<int, 5> arr;
-    arr.fill(10);
-    for(int i=0; i < arr.size(); i++){
-        cout << arr.at(i) << ",";
-    }
+    // array<int, 5> arr;
+    // arr.fill(10);
+    // for(int i=0; i < arr.size(); i++){
+    //     cout << arr.at(i) << ",";
+    // }
 
     // vector<int> n;
     // n.push_back(1);
@@ -27,5 +27,12 @@ int main(){
     // v.push_back(1);
     // v.push_front(1);
     // v.erase(v.begin(), v.begin()+1);
+
+    array<int, 5> arr = {1,2,3,4,5};
+    for(auto it: arr.begin(); it !=arr.end(); it++){
+        cout << *it << " ";
+    }
+
+
     return 0;
 }
