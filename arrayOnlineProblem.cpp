@@ -290,5 +290,24 @@ int main()
     // swapAlternate(odd, 5);
     // printArray(odd, 5);
 
+    int findLargestEle;
+    int exterCandi = 3;
+    bool ans;
+   int arr [5] = {11, 33, 9, 76, 43}
+    for(int i=0; i<arr; i++){
+        if(arr[0] < arr[i])
+        findLargestEle = arr[i];
+    }
+
+    for(int i=0; i<arr; i++){
+        if(arr[i] + exterCandi >= findLargestEle){
+            ans[i] = true;
+        } else{
+            ans[i] = false;
+        }
+    }
+
+    
+
     return 0;
 }
