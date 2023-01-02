@@ -294,18 +294,31 @@ int main()
     int exterCandi = 3;
     bool ans;
    int arr [5] = {11, 33, 9, 76, 43}
-    for(int i=0; i<arr; i++){
-        if(arr[0] < arr[i])
-        findLargestEle = arr[i];
-    }
+//    kids habe greatest candies
+    // for(int i=0; i<arr; i++){
+    //     if(arr[0] < arr[i])
+    //     findLargestEle = arr[i];
+    // }
 
-    for(int i=0; i<arr; i++){
-        if(arr[i] + exterCandi >= findLargestEle){
-            ans[i] = true;
-        } else{
-            ans[i] = false;
-        }
-    }
+    // for(int i=0; i<arr; i++){
+    //     if(arr[i] + exterCandi >= findLargestEle){
+    //         ans[i] = true;
+    //     } else{
+    //         ans[i] = false;
+    //     }
+
+// running sum of 1d Array
+  int arr2 [5] = {1, 2, 3, 4};
+  int sumOfRunn = 0;
+  for(int i=0; i < 4; i++) {
+      if(i == 0){
+        sumOfRunn+=arr2[0];
+      } else{
+        sumOfRunn+=arr2[i];
+        cout << sumOfRunn<<endl;
+      } 
+        // cout << sumOfRunn << endl;
+  }
 
     
 
