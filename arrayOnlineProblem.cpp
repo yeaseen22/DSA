@@ -311,15 +311,24 @@ int main()
   int arr2 [5] = {1, 2, 3, 4};
   int sumOfRunn = 0;
   for(int i=0; i < 4; i++) {
-      if(i == 0){
-        sumOfRunn+=arr2[0];
-      } else{
-        sumOfRunn+=arr2[i];
-        cout << sumOfRunn<<endl;
-      } 
+    //   if(i == 0){
+    //     sumOfRunn+=arr2[0];
+    //   } else{
+    //     sumOfRunn+=arr2[i];
+    //     cout << sumOfRunn<<endl;
+    //   } 
         // cout << sumOfRunn << endl;
-  }
+    }
 
+    // number of good pairs bad approach
+
+    int ans = 0;
+    for(int i = 0; i < 5; i++){
+        for(int j = i; j+1 < 5; j++){
+            if(arr2[i] == arr2[j]) ans++;
+        }
+    }
+    cout << "Good Paid " << ans << endl; 
     
 
     return 0;
