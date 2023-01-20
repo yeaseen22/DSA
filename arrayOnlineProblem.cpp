@@ -322,13 +322,31 @@ int main()
 
     // number of good pairs bad approach
 
+    // int ans = 0;
+    // for(int i = 0; i < 5; i++){
+    //     for(int j = i; j+1 < 5; j++){
+    //         if(arr2[i] == arr2[j]) ans++;
+    //     }
+    // }
+    // cout << "Good Pair " << ans << endl; 
+
+    // good pair another approach
+    int num[100] = {0};
+    int n = num;
     int ans = 0;
-    for(int i = 0; i < 5; i++){
-        for(int j = i; j+1 < 5; j++){
-            if(arr2[i] == arr2[j]) ans++;
-        }
+
+    for(int i=0; i < n; i++) {
+        num[i]++;
     }
-    cout << "Good Paid " << ans << endl; 
+
+    for(int i=1; i <= 100; i++) {
+        ans += (num[i] * (num[i] -1) / 2);
+    }
+
+    cout << ans << endl;
+
+
+
     
 
     return 0;
