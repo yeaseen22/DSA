@@ -35,7 +35,7 @@ bool isPossible(vector<int> arr, int n, int m, int mid)
 int main()
 {
 
-    i nt allocateBooks(vector<int> arr, int n, int m)
+    int allocateBooks(vector<int> arr, int n, int m)
     {
         int s = 0;
         int sum = 0;
