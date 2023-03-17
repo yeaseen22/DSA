@@ -22,6 +22,7 @@
  int main (){
 
  car c1 = {"BMW", "Red", 250, 2022};
+ car c2 = {"B", "Red", 230, 2023};
 
  fun(c1);
 
