@@ -1,67 +1,33 @@
-#include <stdio.h>
-
+#include <iostream>
+#include <algorithm>
 using namespace std;
 
-bool isPossible(vector<int> arr, int n, int m, int mid)
-{
-    int studentCount = 1;
-    int pageSum = 0;
-    // cout << "checking for mid "<< mid <<endl;
-
-    for (int i = 0; i < n; i++)
-    {
-        if (pageSum + arr[i] <= mid)
-        {
-            pageSum += arr[i];
+int binarySearch(int books[], int n, int budget) {
+    int low = 0, high = n-1, mid, ans = -1;
+    while (low <= high) {
+        mid = (low+high)/2;
+        if (books[mid] <= budget) {
+            ans = mid;
+            low = mid+1;
         }
-        else
-        {
-            studentCount++;
-            if (studentCount > m || arr[i] > mid)
-            {
-                return false;
-            }
-            pageSum = arr[i];
-        }
-        if (studentCount > m)
-        {
-            return false;
-        }
-        // cout << " for i " << i << " Student "<< studentCount << " pageSum " << pageSum << endl;
+        else high = mid-1;
     }
-    return true;
+    return ans;
 }
 
-int main()
-{
-
-    int allocateBooks(vector<int> arr, int n, int m)
-    {
-        int s = 0;
-        int sum = 0;
-
-        for (int i = 0; i < n; i++)
-        {
-            sum += arr[i];
-        }
-        int e = sum;
-        int ans = -1;
-        int mid = s + (e - s) / 2;
-
-        while (s <= e)
-        {
-            if (isPossible(arr, n, m, mid))
-            {
-                // cout<<" Mid returned TRUE" << endl;
-                ans = mid;
-                e = mid - 1;
-            }
-            else
-            {
-                s = mid + 1;
-            }
-            mid = s + (e - s) / 2;
-        }
-        return ans;
-    }
+int main() {
+    int n, budget;
+    cout << "Enter the number of books: ";
+    cin >> n;
+    int books[n];
+    cout << "Enter the price of books: ";
+    for (int i = 0; i < n; i++)
+        cin >> books[i];
+    sort(books, books+n); // sorting the array
+    cout << "Enter your budget: ";
+    cin >> budget;
+    int ans = binarySearch(books, n, budget);
+    if (ans == -1) cout << "No book can be purchased within the budget\n";
+    else cout << "Maximum number of books that can be purchased: " << ans+1 << endl;
+    return 0;
 }
