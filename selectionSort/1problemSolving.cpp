@@ -13,7 +13,10 @@ int kthSmallest(int arr[], int n, int k)
                 min_idx = j;
             }
         }
-        swap(arr[i], arr[min_idx]);
+        // swapt the without swap function
+        int temp = arr[i];
+        arr[i] = arr[min_idx];
+        arr[min_idx] = temp;
     }
     return arr[k - 1];
 }
@@ -29,7 +32,11 @@ void selectionSort(int arr[], int n)
             if (arr[j] < arr[min_idx])
                 min_idx = j;
         }
-        swap(arr[min_idx], arr[i]);
+        // swap(arr[min_idx], arr[i]);
+        // swapt the without swap function
+        int temp = arr[i];
+        arr[i] = arr[min_idx];
+        arr[min_idx] = temp;
     }
 }
 
