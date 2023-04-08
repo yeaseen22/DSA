@@ -29,10 +29,38 @@ int main2 (void){
         return 0;
     }
 
+  // complimentBase10Integer
+  void complimentBase10Integer(int num) {
+  int binary[128]; // ৩২ বিট বাইনারি সংখ্যা জন্য একটি অ্যারে
+
+  int i = 0;
+  while (num > 0) {
+    binary[i] = num % 2; // বিপরীত বিট সেট করা
+    num = num / 2;
+    cout<<num<<std::endl;
+    // std::cout<<num;
+    i++;
+  }
+
+  // বিপরীত চিহ্নিত করা বাইনারি সংখ্যা প্রিন্ট করা
+  cout << "Binary Numbers ";
+  for (int j = 0;j<= 2; j++) {
+    std::cout << binary[j];
+  }
+  std::cout << std::endl;
+}
+
 
 int main(){
 
   main2();
+
+
+  int num;
+  cout << "Enter The Number: ";
+  cin >> num;
+
+  complimentBase10Integer(num);
 
   return 0;
 }
