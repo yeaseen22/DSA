@@ -31,7 +31,7 @@ int main2 (void){
 
   // complimentBase10Integer
   void complimentBase10Integer(int num) {
-  int binary[128]; // ৩২ বিট বাইনারি সংখ্যা জন্য একটি অ্যারে
+  int binary[32]; // ৩২ বিট বাইনারি সংখ্যা জন্য একটি অ্যারে
 
   int i = 0;
   while (num > 0) {
@@ -50,6 +50,10 @@ int main2 (void){
   std::cout << std::endl;
 }
 
+bool isPowerOfTwo(n) {
+  return n > 0 && (n & ( n - 1)) == 0;
+}
+
 
 int main(){
 
@@ -61,6 +65,11 @@ int main(){
   cin >> num;
 
   complimentBase10Integer(num);
+  if(isPowerOfTwo(num)){
+    cout << num << " is a power of two " <<endl;
+  } else{
+    cout << " is not a power of two " <<endl;
+  }
 
   return 0;
 }
