@@ -76,5 +76,9 @@ int main() {
         cout << arr[i] << " ";
     }
 
+    /**
+    It divides the array into smaller subarrays, sorts them individually, and then merges them back together into a single sorted array.
+    */ 
+
     return 0;
 }
